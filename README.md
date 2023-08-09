@@ -7,11 +7,19 @@ Programa desenvolvido para executar em python3, caso não possua instalado no co
 Com o python3 instalado, abra um terminal e instale as seguintes bibliotecas 
 
 pip install tkinter
+
 pip install stl
+
 pip install trimesh
+
 pip install subprocess
+
 pip install scipy
+
 pip install os
+
 pip install PIL
+
+
 
 
