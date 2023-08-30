@@ -20,6 +20,14 @@ pip install os
 
 pip install PIL
 
+# Dados de entrada
+
+- Arquivo contendo as coordenadas adimensionais em duas dimensões (x,y) do aerofólio de desenho da pá. Baixar direto do site http://airfoiltools.com/
+- Arquivo de projeto da pá contendo raio [m], corda[m] e angulação[°] (radius, chord and twist)
+- Dimensões da torre: raio[m] e altura[m].
+- Dimensões da fundação: raio[m] e altura[m].
+
+
 
 
 
