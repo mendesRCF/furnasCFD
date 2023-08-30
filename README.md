@@ -6,19 +6,13 @@ Programa desenvolvido para executar em python3 dentro da platafoma jupyter noteb
 
 Com o python3 instalado, abra um terminal e instale as seguintes bibliotecas 
 
-pip install tkinter
-
-pip install stl
-
-pip install trimesh
-
-pip install subprocess
-
-pip install scipy
-
-pip install os
-
-pip install PIL
+-  pip install tkinter
+-  pip install stl
+-  pip install trimesh
+-  pip install subprocess
+-  pip install scipy
+-  pip install os
+-  pip install PIL
 
 # Dados de entrada
 
@@ -26,6 +20,16 @@ pip install PIL
 - Arquivo de projeto da pá contendo raio [m], corda[m] e angulação[°] (radius, chord and twist)
 - Dimensões da torre: raio[m] e altura[m].
 - Dimensões da fundação: raio[m] e altura[m].
+
+# Caso teste
+
+Para executar o caso teste, faça o download dos seguinte aquivos em um mesmo diretório 
+
+-TurbineComplete.ipynb
+-shapeTUCUNARE.dat
+-NACA653618.dat
+
+Após o download, execute o arquivo em seu compilador Pyhton TurbineComplete.ipynb
 
 
 
