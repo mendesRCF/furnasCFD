@@ -25,11 +25,11 @@ Com o python3 instalado, abra um terminal e instale as seguintes bibliotecas
 
 Para executar o caso teste, faça o download dos seguinte aquivos em um mesmo diretório 
 
--TurbineComplete.ipynb
--shapeTUCUNARE.dat
--NACA653618.dat
+- TurbineComplete.ipynb
+- shapeTUCUNARE.dat
+- NACA653618.dat
 
-Após o download, execute o arquivo em seu compilador Pyhton TurbineComplete.ipynb
+Após o download, execute o arquivo "TurbineComplete.ipynb" em seu compilador Pyhton 
 
 
 
