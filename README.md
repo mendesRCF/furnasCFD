@@ -21,6 +21,14 @@ Com o python3 instalado, abra um terminal e instale as seguintes bibliotecas
 - Dimensões da torre: raio[m] e altura[m].
 - Dimensões da fundação: raio[m] e altura[m].
 
+# Arquivos de saída
+
+O presente código gera 3 arquivos de geometrias "nome de saída dado pelo o usuário". 
+
+- "nome de saída dado pelo o usuário"_rotor.stl
+- "nome de saída dado pelo o usuário"_tower.stl
+- "nome de saída dado pelo o usuário"_foundation.stl
+
 # Caso teste
 
 Para executar o caso teste, faça o download dos seguinte aquivos em um mesmo diretório 
