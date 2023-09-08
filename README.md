@@ -31,11 +31,10 @@ O presente código gera 3 arquivos de geometrias "nome de saída dado pelo o usu
 
 # Caso teste
 
-Para executar o caso teste, faça o download dos seguinte aquivos em um mesmo diretório 
+Para executar o caso teste, faça o download de todos os aquivos em um mesmo diretório e exeute o arquivo 
 
 - TurbineComplete.ipynb
-- shapeTUCUNARE.dat
-- NACA653618.dat
+
 
 Após o download, execute o arquivo "TurbineComplete.ipynb" em seu compilador Pyhton 
 
