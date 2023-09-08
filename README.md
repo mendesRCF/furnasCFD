@@ -28,7 +28,7 @@ Copie e cole cada uma das seguintes linhas no terminal e pressione a tecla "ENTE
 Certifique-se de instalar todas essas bibliotecas para garantir o funcionamento adequado do programa de desenho da turbina.
 
 ![manual 1](https://github.com/mendesRCF/furnasCFD/assets/66641867/9341fbf6-73d9-4f7e-9578-5de1c73b3953)
-Figura 1: Instalação das Bibliotecas
+Figura 1: Exemplo de instalação das biblioteca stl.
 
 Nota Importante:
 
@@ -57,7 +57,7 @@ Clique no arquivo "TurbineComplete.ipynb" para abri-lo no Jupyter Notebook.
 
 ![Captura de tela 2023-09-08 181014](https://github.com/mendesRCF/furnasCFD/assets/66641867/0eae9810-4432-4199-ab7c-2b8298ac001d)
 
-7. Aperte "Generate Turbine" e o código irá executar e irá gerar o desenho de uma turbine pré-configurada.
+7. Aperte "Generate Turbine!" e o código irá executar, gerando o desenho de uma turbine pré-configurada.
 
 ![Captura de tela 2023-09-08 181030](https://github.com/mendesRCF/furnasCFD/assets/66641867/98dc8331-0d23-434b-a074-c768bf26e419)
 
