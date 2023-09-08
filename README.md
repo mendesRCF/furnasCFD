@@ -6,13 +6,18 @@ Programa desenvolvido para executar em python3 dentro da platafoma jupyter noteb
 
 Com o python3 instalado, abra um terminal e instale as seguintes bibliotecas 
 
--  pip install tkinter
+
 -  pip install stl
 -  pip install trimesh
--  pip install subprocess
 -  pip install scipy
--  pip install os
--  pip install PIL
+-  pip install Pillow
+
+# Caso teste
+
+Para executar o caso teste, faça o download de todos os aquivos em um mesmo diretório e exeute o arquivo 
+
+- TurbineComplete.ipynb
+
 
 # Dados de entrada
 
@@ -29,11 +34,6 @@ O presente código gera 3 arquivos de geometrias "nome de saída dado pelo o usu
 - "nome de saída dado pelo o usuário"_tower.stl
 - "nome de saída dado pelo o usuário"_foundation.stl
 
-# Caso teste
-
-Para executar o caso teste, faça o download de todos os aquivos em um mesmo diretório e exeute o arquivo 
-
-- TurbineComplete.ipynb
 
 
 Após o download, execute o arquivo "TurbineComplete.ipynb" em seu compilador Pyhton 
