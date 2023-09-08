@@ -4,16 +4,17 @@ Versão de teste do programa de desenho da turbina para simulações em CFD.
 
 Programa desenvolvido para executar em python3 dentro da platafoma jupyter notebook, caso não possua instalado no computador recomendo a instalação do pacote Anaconda (https://www.anaconda.com/).
 
-Com o python3 instalado, abra um terminal e instale as seguintes bibliotecas.
+Com o anaconda instalado, abra um terminal (CMD.exe Prompt).
 
-![Captura de tela 2023-09-08 174754](https://github.com/mendesRCF/furnasCFD/assets/66641867/848a5322-0d8c-4973-9446-cfd429cb52c0)
-![Captura de tela 2023-09-08 174932](https://github.com/mendesRCF/furnasCFD/assets/66641867/b4c9fbba-676b-46ea-9b24-622d60c93ead)
-
+Após a abertura, instale as bibliotecas necessárias colando cada linha individualmente no terminal e apertando ENTER (conforme ilustrado na figura 1)
 
 -  pip install stl
 -  pip install trimesh
 -  pip install scipy
 -  pip install Pillow
+
+![manual 1](https://github.com/mendesRCF/furnasCFD/assets/66641867/9341fbf6-73d9-4f7e-9578-5de1c73b3953)
+Figura 1 - Exemplo de instalação da biblioteca STL.
 
 # Caso teste
 
