@@ -20,7 +20,7 @@ Após a instalação do Anaconda, abra um terminal de comando. Isso pode ser fei
 
 Copie e cole cada uma das seguintes linhas no terminal e pressione a tecla "ENTER" após cada linha, conforme ilustrado na Figura 1:
 
-- pip install stl
+- pip install numpy-stl
 - pip install trimesh
 - pip install scipy
 - pip install Pillow
