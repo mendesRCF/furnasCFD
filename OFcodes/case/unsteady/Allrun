@@ -1,0 +1,26 @@
+#!/bin/bash
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+
+
+#------------------------------------------------------------------------------
+
+touch turbine_unsteady.foam
+
+cd constant
+ln -s ../../mesh/domain/constant/polyMesh polyMesh
+cd ..
+
+restore0Dir
+
+#runApplication mapFields ../steady -sourceTime latestTime -consistent
+
+runApplication decomposePar -force
+
+# Run
+mpirun --oversubscribe -np 10 pimpleFoam -parallel  > log.pimpleFoam
+
+# Reconstruct
+runApplication reconstructPar
+
+#------------------------------------------------------------------------------

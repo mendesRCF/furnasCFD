@@ -1,0 +1,40 @@
+#!/bin/bash
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+
+touch turbine_mesh.foam
+source "system/initialConditions.bash"
+
+restore0Dir
+
+python3 ./constant/geometry/generate_domain.py ./constant/geometry/domain.stl $xMin $xMax $yMin $yMax $zMin $zMax
+
+./constant/geometry/join_surfaces
+
+cp -r "constant/geometry/"* "constant/triSurface"
+./system/surfaceFeatureExtract.template
+runApplication surfaceFeatureExtract
+
+runApplication cartesianMesh
+
+runApplication improveMeshQuality
+
+runApplication mergeMeshes -overwrite . ../turbine
+
+runApplication checkMesh
+
+rm -r constant/polyMesh/sets/nonOrthoFaces
+rm -r constant/polyMesh/sets/skewFaces
+rm -r constant/polyMesh/sets/highAspectRatioCells
+rm -r constant/polyMesh/sets/zeroVolumeCells
+rm -r constant/polyMesh/sets/wrongOrientedFaces
+
+runApplication setsToZones
+
+runApplication createPatch -overwrite
+
+
+
+#------------------------------------------------------------------------------

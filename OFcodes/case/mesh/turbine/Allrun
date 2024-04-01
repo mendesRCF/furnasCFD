@@ -1,0 +1,24 @@
+#!/bin/bash
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+
+touch turbine_mesh.foam
+source "system/initialConditions.bash"
+
+restore0Dir
+
+./constant/geometry/join_surfaces
+
+cp -r "constant/geometry/"* "constant/triSurface"
+./system/surfaceFeatureExtract.template
+runApplication surfaceFeatureExtract
+
+runApplication cartesianMesh
+
+runApplication improveMeshQuality
+
+runApplication checkMesh
+
+#------------------------------------------------------------------------------

@@ -1,0 +1,96 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    p
+    {
+        solver          PCG; //GAMG;
+        preconditioner
+        {
+            preconditioner	GAMG;
+            smoother        	DICGaussSeidel;
+            nPreSweeps		0;
+            nPostSweeps		2;
+            nBottomSweeps	2;
+            cacheAgglomeration	true;
+            agglomerator	faceAreaPair;
+            nCellsCoarsestLevel	50;
+            mergeLevels		1;
+        }
+        tolerance       1e-6;
+        relTol          0.01;
+	    maxIter		100;
+    }
+
+    pFinal
+    {
+        $p;
+        relTol          0;
+    }
+
+    "pcorr.*"
+    {
+        $p;
+        tolerance       1e-2;
+        relTol          0;
+    }
+
+    "(U|k|omega)"
+    {
+        solver          PBiCG; // smoothSolver;
+        preconditioner  DILU; // symGaussSeidel;
+	    smoother        symGaussSeidel;
+        tolerance       1e-5;
+        relTol          0.1;
+	    maxIter		100;
+    }
+
+    "(U|k|omega)Final"
+    {
+        solver          PBiCG; // smoothSolver;
+        preconditioner  DILU; // symGaussSeidel;
+	    smoother        symGaussSeidel;
+        tolerance       1e-5;
+        relTol          0.0;
+	    maxIter		100;
+    }
+}
+
+PIMPLE
+{
+    pRefCell	0;
+    pRefValue	0;
+    nOuterCorrectors    2;
+    nCorrectors         3;
+    nNonOrthogonalCorrectors 2;
+}
+
+relaxationFactors
+{
+    fields
+    {
+	    p	0.3;
+    }
+    equations
+    {
+        U       0.5;
+        k	    0.5;
+    	omega	0.5;
+    }
+}
+
+// ************************************************************************* //
